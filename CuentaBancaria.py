@@ -28,14 +28,6 @@ class CuentaBancaria:
         else:
             print('Balance negativo, no genera interés')
         return self
-    def transferir_dinero(self, other_user, amount):
-        if(self.balance - amount < 0):
-            print('Fondos insuficientes')
-        else:
-            print(f'Realizando una transferencia de {amount:.2f} a la cuenta de {other_user.name}')
-            self.balance -= amount
-            other_user.cuenta.balance += amount
-        return self
     @classmethod
     def toda_la_info(cls):
         for cuenta in cls.todas_las_cuentas:
