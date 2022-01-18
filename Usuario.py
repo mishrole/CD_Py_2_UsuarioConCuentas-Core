@@ -17,3 +17,6 @@ class Usuario:
     def mostrar_balance_usuario(self):
         print(f'Usuario: {self.name}, Balance: {self.cuenta.balance:.2f}')
         return self
+    def transferencia_externa(self, other_user, amount):
+        self.cuenta.transferir_dinero(other_user, amount)
+        return self
